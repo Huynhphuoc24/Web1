@@ -37,8 +37,4 @@
         </form>
     </div>
 </main>
-
-<footer class="w-full bg-white py-4 border-t">
-    <div class="text-center text-gray-700">Nhom D</div>
-</footer>
 @endsection

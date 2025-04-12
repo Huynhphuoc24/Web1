@@ -26,5 +26,7 @@
         </header>
         @yield('content')
     </body>
-
+    <footer class="w-full bg-white py-4 border-t">
+        <div class="text-center text-gray-700">Lap trinh web</div>
+    </footer>
 </html>

@@ -14,6 +14,10 @@
                         class="border border-gray-300 px-4 py-2">Username</th>
                     <th
                         class="border border-gray-300 px-4 py-2">Email</th>
+                        <th
+                        class="border border-gray-300 px-4 py-2">Age</th>
+                        <th
+                        class="border border-gray-300 px-4 py-2">Facebook</th>
                     <th class="border border-gray-300 px-4 py-2">Thao
                         tác</th>
                 </tr>
@@ -39,9 +43,5 @@
         </table>
     </div>
 </main>
-
-<footer class="w-full bg-white py-4 border-t">
-    <div class="text-center text-gray-700">Nhom D</div>
-</footer>
 
 @endsection

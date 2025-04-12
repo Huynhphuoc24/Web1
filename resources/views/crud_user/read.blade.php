@@ -15,9 +15,4 @@
         </div>
     </main>
 
-    <div class="w-full border-t">
-        <div class="flex justify-center py-2">
-            <span>Nhom D</span>
-        </div>
-    </div>
 @endsection
