@@ -1,56 +1,23 @@
 @extends('dashboard')
 
 @section('content')
-<main class="user-detail">
-    <div class="container">
-        <h2 class="text-center mb-4">User  Details</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">User  Information</h5>
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <th>ID</th>
-                                    <td>{{ $messi->id }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Name</th>
-                                    <td>{{ $messi->name }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Email</th>
-                                    <td>{{ $messi->email }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Phone</th>
-                                    <td>{{ $messi->phone }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Address</th>
-                                    <td>{{ $messi->address }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="d-flex justify-content-between mt-3">
-                            <a href="{{ route('user.updateUser', ['id' => $messi->id]) }}" class="btn btn-warning">Edit</a>
-                            <a href="#" class="btn btn-danger" onclick="confirmDelete('{{ route('user.deleteUser', ['id' => $messi->id]) }}')">Delete</a>
-                        </div>
-                    </div>
-                </div>
+<main class="flex-grow flex items-center justify-center">
+        <div class="border p-8 rounded shadow-md">
+            <h1 class="text-center mb-4">Màn hình chi tiết</h1>
+            <div class="mb-2">
+                <span class="font-semibold">Username: </span>
+                <span class="ml-4">{{$messi->name}}</span>
+            </div>
+            <div class="mb-4">
+                <span class="font-semibold">Email: </span>
+                <span class="ml-4">{{$messi->email}}</span>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<script>
-    function confirmDelete(url) {
-        if (confirm('Are you sure you want to delete this user?')) {
-            window.location.href = url; // Redirect to the delete URL
-        }
-    }
-</script>
+    <div class="w-full border-t">
+        <div class="flex justify-center py-2">
+            <span>Nhom D</span>
+        </div>
+    </div>
 @endsection
