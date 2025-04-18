@@ -39,7 +39,7 @@
             </div>
             <div class="mb-4">
                 <label for="facebook" class="block text-gray-700">Facebook</label>
-                <input type="facebook" placeholder="facebook" id="facebook" class="w-full px-3 py-2 border rounded" name="password" required>
+                <input type="facebook" placeholder="facebook" id="facebook" class="w-full px-3 py-2 border rounded" name="facebook" required>
                 @if ($errors->has('facebook'))
                 <span class="text-danger">{{ $errors->first('facebook') }}</span>
                 @endif

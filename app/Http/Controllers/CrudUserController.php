@@ -61,7 +61,6 @@ class CrudUserController extends Controller
             'password' => 'required|min:6',
             'age' => 'required',
             'facebook' => 'required',
-///
         ]);
 
         $data = $request->all();
@@ -71,7 +70,7 @@ class CrudUserController extends Controller
             'password' => Hash::make($data['password']),
             'age' => $data['age'],
             'facebook' => $data['facebook'],
-///
+            ///
         ]);
 
         return redirect("login");
@@ -80,7 +79,8 @@ class CrudUserController extends Controller
     /**
      * View user detail page
      */
-    public function readUser(Request $request) {
+    public function readUser(Request $request)
+    {
         $user_id = $request->get('id');
         $user = User::find($user_id);
 
@@ -90,7 +90,8 @@ class CrudUserController extends Controller
     /**
      * Delete user by id
      */
-    public function deleteUser(Request $request) {
+    public function deleteUser(Request $request)
+    {
         $user_id = $request->get('id');
         $user = User::destroy($user_id);
 
@@ -117,21 +118,19 @@ class CrudUserController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:users,id,'.$input['id'],
+            'email' => 'required|email|unique:users,id,' . $input['id'],
             'password' => 'required|min:6',
             'age' => 'required',
             'facebook' => 'required',
-///
         ]);
 
-       $user = User::find($input['id']);
-       $user->name = $input['name'];
-       $user->email = $input['email'];
-       $user->password = Hash::make($input['password']);
-
-$user->age = $input['age'];
-$user->faecbook = $input['facebook'];
-       $user->save();
+        $user = User::find($input['id']);
+        $user->name = $input['name'];
+        $user->email = $input['email'];
+        $user->password = Hash::make($input['password']);
+        $user->age = $input['age'];
+        $user->facebook = $input['facebook'];
+        $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');
     }
@@ -141,7 +140,7 @@ $user->faecbook = $input['facebook'];
      */
     public function listUser()
     {
-        if(Auth::check()){
+        if (Auth::check()) {
             $users = User::all();
             return view('crud_user.list', ['users' => $users]);
         }
@@ -152,7 +151,8 @@ $user->faecbook = $input['facebook'];
     /**
      * Sign out
      */
-    public function signOut() {
+    public function signOut()
+    {
         Session::flush();
         Auth::logout();
 

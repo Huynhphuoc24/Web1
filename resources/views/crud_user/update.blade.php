@@ -31,19 +31,22 @@
                 @endif
             </div>
             <div class="mb-4">
-                <label for="age" class="block text-gray-700">Age</label>
-                <input type="age" placeholder="age" id="age" class="w-full px-3 py-2 border rounded" name="age" required>
+                <label for="username" class="block text-gray-700">Age</label>
+                <input type="text" placeholder="Age" id="like" class="w-full px-3 py-2 border rounded" name="age" required
+                    autofocus value="{{ $user->age }}">
                 @if ($errors->has('age'))
                 <span class="text-danger">{{ $errors->first('age') }}</span>
                 @endif
             </div>
             <div class="mb-4">
-                <label for="facebook" class="block text-gray-700">Facebook</label>
-                <input type="facebook" placeholder="facebook" id="facebook" class="w-full px-3 py-2 border rounded" name="password" required>
+                <label for="username" class="block text-gray-700">Facebook</label>
+                <input type="text" placeholder="Facebook" id="facebook" class="w-full px-3 py-2 border rounded" name="facebook" required
+                    autofocus value="{{ $user->facebook }}">
                 @if ($errors->has('facebook'))
                 <span class="text-danger">{{ $errors->first('facebook') }}</span>
                 @endif
             </div>
+        
             <div class="text-center">
                 <button type="submit"
                     class="bg-blue-500 text-white px-4 py-2 rounded">Lưu</button>
@@ -51,5 +54,6 @@
         </form>
     </div>
 </main>
+
 
 @endsection

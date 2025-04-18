@@ -31,6 +31,10 @@
                         class="border border-gray-300 px-4 py-2 text-center">{{ $user->name }}</td>
                     <td
                         class="border border-gray-300 px-4 py-2 text-center">{{ $user->email }}</td>
+                        <td
+                        class="border border-gray-300 px-4 py-2 text-center">{{ $user->age }}</td>
+                        <td
+                        class="border border-gray-300 px-4 py-2 text-center">{{ $user->facebook }}</td>
                     <td
                         class="border border-gray-300 px-4 py-2 text-center">
                         <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="text-blue-500">Edit</a> |
