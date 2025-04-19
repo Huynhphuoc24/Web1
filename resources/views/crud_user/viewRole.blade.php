@@ -29,6 +29,7 @@
                     @endforelse
                 </tbody>
             </table>
+            
         </div>
     </div>
 
